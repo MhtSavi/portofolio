@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const form = document.getElementById('contact-form');
+    const formMessage = document.getElemenetById('form-message');
     if(form) {
         form.addEventListener('submit', function(event) {
             event.preventDefault();
