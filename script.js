@@ -2,19 +2,45 @@ document.addEventListener('DOMContentLoaded', function() {
     const humburger = document.querySelector('.humburger');
     const lienNavig = document.querySelector('.lien-nav');
 
-    humburger.addEventListener('click', function(){
-        lienNavig.classList.toggle('afficher');
-    });
-     
-    const liens = document.querySelectorAll('.lien-nav a');
-    liens.forEach(lien => {
-        lien.addEventListener('click', function(){
-            lienNavig.classList.remove('afficher');
-        });
-    });
+    
+    if (humburger && lienNavig) {
+        humburger.addEventListener('click', function (e) {          lienNavig.classList.toggle('afficher');
 
+            const icone = humburger.querySelector('i');
+            if (lienNavig.classList.contains('afficher')) {
+                icone.classList.remove('fa-bars');
+                icone.classList.add('fa-times');
+            } else {
+                icone.classList.remove('fa-times');
+                icone.classList.add('fa-bars');
+            }
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!humburger.contains(e.target) && !lienNavig.contains(e.target)) {
+                lienNavig.classList.remove('afficher');
+                const icone = humburger.querySelector('i');
+                icone.classList.remove('fa-times');
+                icone.classList.add('fa-bars');
+            }
+        });
+
+        const liens = document.querySelectorAll('.lien-nav a');
+        liens.forEach(function (lien) {
+            lien.addEventListener('click', function () {
+                lienNavig.classList.remove('afficher');
+                const icone = humburger.querySelector('i');
+                icone.classList.remove('fa-times');
+                icone.classList.add('fa-bars');
+            });
+        });
+    }
     const form = document.getElementById('contact-form');
+<<<<<<< HEAD
     const formMessage = document.getElemenetById('form-message');
+=======
+    const formMessage = document.getElementById('form-message');
+>>>>>>> f173c1a6c27a000a108c46fa017dd50652df7928
     if(form) {
         form.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -32,9 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (erreurs.length > 0) {
                 alert("Erreurs:\n"+erreurs.join("\n"));
             }else{
-                form.Message.textContent ="✅️ Message envoyé. Merci !";
+                formMessage.textContent ="✅️ Message envoyé. Merci !";
                 form.reset();
-                setTimeout()=> { form.Message.textContent ='';}, 4000);
+                setTimeout()=> { formMessage.textContent ='';}, 4000);
             }
         });
     }
