@@ -29,8 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if(!message.value.trim()) erreurs.push("Veuillez entrer un message");
             
             if (erreurs.length > 0) {
-                alert("Message envoye. Merci !");
+                alert("Erreurs:\n"+erreurs.join("\n"));
+            }else{
+                form.Message.textContent ="✅️ Message envoyé. Merci !";
                 form.reset();
+                setTimeout()=> { form.Message.textContent ='';}, 4000);
             }
         });
     }
