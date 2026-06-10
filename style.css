@@ -109,6 +109,25 @@ section[id] {
     margin-bottom: 0.5rem;
 }
 
+.btn-hero {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 12px 32px;
+    background: #1E6F5C;
+    color: white;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+.btn-hero:hover { background: #289672; }
+
+.temoignages p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 #contact form {
     max-width: 600px;
     margin: 2rem auto;
@@ -160,6 +179,10 @@ footer {
         padding: 1rem 0;
         gap: 1rem;
         text-align: center;
+    }
+
+    .lien-nav.afficher {
+        display: flex;
     }
     
     .humburger {

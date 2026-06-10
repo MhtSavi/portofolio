@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width , initial-scale=1.0">
-        <title>IgoTech Portofolio</title>
+        <title>IgoTech-Portofolio</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
@@ -11,7 +11,7 @@
     <body>
         <header>
             <nav>
-                <div class="logo">IgoTech</div>
+                <div class="logo"><i class="fas fa-bolt">IgoTech</i></div>
                 <div class="lien-nav">
                     <ul>
                         <li><a href="#accueil">Accueil</a></li>
@@ -21,68 +21,87 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="humburger"> = </div>
+                <div class="humburger"><i class="fas fa-bars"></i></div>
             </nav>
         </header>
 
         <main>
             <section id="accueil">
-                <h1>IgoTech - Agence Digitale</h1>
-                <p>Creation de sites web, gestion des reseaux sociaux, creation de contenu visuel et de compagnes de marketing digital </p>
+                <h1>IgoTech, au coeur de la revolution digitale au Tchad</h1>
+                <p>IgoTech est une agence digitale dynamique basee au Tchad, specialisee dans la gestion de Creation des sites web, gestion des reseaux sociaux, creation de contenu visuel et de compagnes de marketing digital.<br>Notre mission : accompagner individus et organisation dans leur transformation digitale. </p>
+                <a href="#contact" class="btn-hero">Nous contacter</a>
             </section>
             <section id="services">
                 <h2>Nos services</h2>
                 <div class="cartes">
-                    <div class="carte"><i class="carte1"></i><h3>Site web</h3><p>Creation sur mesure</p></div>
-                    <div class="carte"><i class="carte2"></i><h3>Marketing digital</h3><p>Campagnes performantes</p></div>
-                    <div class="carte"><i class="carte3"></i><h3>Design visuel</h3><p>Identite graphique</p></div>
+                    <div class="carte"><i class="fas fa-laptop-code"></i><h3>Site web</h3><p>Des sites modernes, rapides et adaptes a tous les appareils.</p></div>
+                    <div class="carte"><i class="fas fa-bullhorn"></i><h3>Marketing digital</h3><p>Campagnes cibles pour booster votre visibilte en ligne</p></div>
+                    <div class="carte"><i class="fas fa-paint-brush"></i><h3>Design visuel</h3><p>Identite graphique professionnelle et contenu visuel impactant.</p></div>
+                    <div class="carte"><i class="fas fa-share-alt"></i><h3>Reseaux sociaux</h3><p>Gestion de vos communautes et publications de contenu engageants.</p></div>
                 </div>
             </section>
             <section id="projets">
                 <h2>Projets recents</h2>
                 <div class="cartes" id="contenu-projets">
                     <div class="carte">
-                        <img src="https://picsum/300/200?random=1" alt="Capture du projet 1">
+                        <img src="images/image_siteweb.jpg" alt="Site web ">
                         <h3>Projet 1</h3>
                         <p>Site web</p>
                     </div>
                     <div class="carte">
-                        <img src="https://picsum/300/200?random=2" alt="Capture du projet 2">
+                        <img src="images/image_réseaux_sociaux.jpg" alt="Reseaux sociaux">
                         <h3>Projet 2</h3>
                         <p>Reseaux sociaux</p>
                     </div>
                     <div class="carte">
-                        <img src="https://picsum/300/200?random=3" alt="Capture du projet 3">
+                        <img src="images/image_marketing.jpg" alt="Marketing">
                         <h3>Projet 3</h3>
                         <p>Campagne marketing</p>
                     </div>
                 </div>
             </section>
             <section id="temoignages">
-                <h2>Temoignages</h2>
+                   <h2>Témoignages</h2>
                 <div class="cartes">
-                    <div class="carte">
-                        ***** "Excellent Travail"  -  Client A
+                    <div class="carte temoignage">
+                        <div class="etoiles">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>"IgoTech a transformé notre présence en ligne. Résultats visibles dès le premier mois !"</p>
+                        <strong>— Marie Madjiyangar, Directrice Boutique Mode</strong>
                     </div>
-                    <div class="carte">
-                        ****  "Tres professionnel"  -  Client B
+                    <div class="carte temoignage">
+                        <div class="etoiles">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <p>"Équipe très professionnelle, livrables de qualité, délais respectés. Je recommande vivement."</p>
+                        <strong>— Abakar Issa, Gérant PME</strong>
+                    </div>
+                    <div class="carte temoignage">
+                        <div class="etoiles">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>"Notre chiffre d'affaires a augmenté de 40% grâce à la campagne digitale qu'ils ont conçue."</p>
+                        <strong>— Remadji Isidor, Fondatrice StartUp Tech</strong>
                     </div>
                 </div>
             </section>
             <section id="contact">
                 <h2>Contact</h2>
                 <form id="contact-form">
-                    <input type="text" name="nom" placeholder="Nom" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <textarea name="message" placeholder="Message" required></textarea>
-                    <button type="submit">Envoyer</button>
+                    <input type="text" name="nom" placeholder="Votre nom complet" required>
+                    <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+                    <textarea name="message" placeholder="Decrivez votre projet" required></textarea>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Envoyer le message</button>
                 </form>
+                <p id="form-message"></p>
             </section>
         </main>
 
         <footer>
             <p>&copy; IgoTech 2026</p>
         </footer>
-
+        <script src="script.js"></script>
     </body>
 </html>
+
